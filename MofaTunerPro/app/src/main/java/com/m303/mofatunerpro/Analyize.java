@@ -24,17 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link OnAnalyzeFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Analyize#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Analyize extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String LOG_ENTRY = "logEntry";
 
     private String entry;
@@ -45,7 +36,6 @@ public class Analyize extends Fragment {
     NumberFormat valueFormat = new DecimalFormat("0.000");
 
     public Analyize() {
-        // Required empty public constructor
     }
 
 
@@ -68,7 +58,6 @@ public class Analyize extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_analyize, container, false);
     }
 
@@ -172,8 +161,6 @@ public class Analyize extends Fragment {
 
 
         LineData data = new LineData(xVals, dataSets);
-        //chart.getAxisRight().setAxisMinValue(0f);
-        //chart.getAxisRight().setAxisMinValue(15000f);
 
         chart.getAxisLeft().setAxisMinValue(0f);
         chart.getAxisLeft().setAxisMaxValue(1.3f);
