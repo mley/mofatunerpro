@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.m303.mofatunerpro.Logger">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Start Log"
+        android:id="@+id/startLogButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:id="@+id/connectButton"
+        android:layout_below="@+id/statusTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/statusTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calibrate TPS"
+        android:id="@+id/calibrateButton"
+        android:layout_below="@+id/connectButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/throttleBar"
+        android:layout_below="@+id/calibrateButton"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/throttleValue"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="TPS"
+        android:id="@+id/throttleValue"
+        android:layout_below="@+id/calibrateButton"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lambdaBar"
+        android:layout_below="@+id/throttleBar"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/lambdaValue"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="λ"
+        android:id="@+id/lambdaValue"
+        android:layout_below="@+id/throttleBar"
+        android:layout_alignEnd="@+id/throttleValue" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="RPM"
+        android:id="@+id/rpmValue"
+        android:layout_below="@+id/lambdaBar"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rpmBar"
+        android:layout_below="@+id/lambdaBar"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/rpmValue"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="false" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/rpmBar"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown" />
+
+
+</RelativeLayout>
